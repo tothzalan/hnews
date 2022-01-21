@@ -6,7 +6,8 @@
 </script>
 
 <div class="hightlight">
-    <h2>{index+1}. {item['title']} - {item['by']}</h2>
+    <h2>{index+1}. {item['title']}</h2>
+    <Link to="/user/{item['by']}">- {item['by']}</Link>
     <p>Replies: {item['descendants']}</p>
     <a href={item['url']}>Open Link</a>
     <br/>

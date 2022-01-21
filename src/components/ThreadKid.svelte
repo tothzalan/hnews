@@ -1,9 +1,11 @@
 <script lang="ts">
+    import { Link } from "svelte-routing";
+
     export let kid;
 </script>
 
 <div class="hightlight">
-    <h3>{kid['by']}</h3>
+    <Link to="/user/{kid['by']}">{kid['by']}</Link>
     {#if kid.hasOwnProperty("dead")}
         <p>DELETED</p>
     {:else}

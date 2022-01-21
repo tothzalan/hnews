@@ -2,6 +2,7 @@
 	import { Router, Link, Route } from "svelte-routing";
 	import Home from "./routes/Home.svelte";
 	import Thread from "./routes/Thread.svelte";
+	import User from "./routes/User.svelte";
 
 	export let url: string = "";
 </script>
@@ -16,6 +17,7 @@
 	</nav>
 	<main>
 		<Route path="thread/:id" let:params><Thread id={+params.id}></Thread></Route>
+		<Route path="user/:username" let:params><User username={params.username}></User></Route>
 		<Route path="about"><p>About</p></Route>
 		<Route path="/"><Home /></Route>
 	</main>

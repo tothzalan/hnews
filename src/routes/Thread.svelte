@@ -1,9 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
-import App from "../App.svelte";
     import ThreadItem from "../components/ThreadItem.svelte";
     import ThreadKid from "../components/ThreadKid.svelte";
-import Home from "./Home.svelte";
 
     export let id: number;
 
