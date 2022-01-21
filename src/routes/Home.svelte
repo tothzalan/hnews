@@ -29,5 +29,7 @@
         {#each results as item, index}
                 <Story index={+index} item={item}></Story>
         {/each}
+    {:else}
+        <h2>Loading...</h2>
     {/if}
 </div>
