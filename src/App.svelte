@@ -18,7 +18,6 @@
 	<main>
 		<Route path="thread/:id" let:params><Thread id={+params.id}></Thread></Route>
 		<Route path="user/:username" let:params><User username={params.username}></User></Route>
-		<Route path="about"><p>About</p></Route>
 		<Route path="/"><Home /></Route>
 	</main>
 </Router>
