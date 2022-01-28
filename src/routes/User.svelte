@@ -18,12 +18,17 @@
         userData = await resGetUser.json();
     }
 
+    async function inputKeyUp(e: KeyboardEvent) {
+        if(e.keyCode == 13)
+            await getUserData(usernameInput);    
+    }
+
 </script>
 
 
 <div class="container">
     {#if !username}
-        <input bind:value={usernameInput}>
+        <input bind:value={usernameInput} on:keyup={inputKeyUp}>
         <button on:click|preventDefault={()=> { getUserData(usernameInput)}}>Get user</button>
     {/if}
     {#if userData}
